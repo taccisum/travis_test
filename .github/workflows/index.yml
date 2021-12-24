@@ -1,0 +1,7 @@
+name: My Demo Index
+on: [push]
+jobs:
+  SayHello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '🎉 hello gh actions.'
