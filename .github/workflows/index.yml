@@ -13,6 +13,7 @@ jobs:
           distribution: 'temurin'
           java-version: '8'
       - run: java -version
+      - run: mvn --version
   say-goodbay:
     runs-on: ubuntu-latest
     steps:
