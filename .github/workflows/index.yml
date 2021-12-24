@@ -1,10 +1,18 @@
 name: My Demo Index
+uses: actions/setup-java@v2.5.0
+with:
+  distribution: 'temurin'
+  java-version: '11'
 on: [push]
 jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
       - run: echo '🎉 hello gh actions.'
+  say-java-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: java --version
   say-goodbay:
     runs-on: ubuntu-latest
     steps:
