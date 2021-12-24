@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-java@v2.5.0
-      - with:
+        with:
           distribution: 'temurin'
           java-version: '8'
       - run: java --version
