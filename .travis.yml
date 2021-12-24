@@ -1,0 +1,17 @@
+language: java
+jdk:
+  - openjdk8
+
+jobs:
+  include:
+    - stage: test
+      script: echo 'test'
+    - stage: deploy
+      script: echo 'deploy'
+
+#install: mvn install
+#before_script:
+#script:
+#after_script:
+#deploy:
+#after_deploy:
