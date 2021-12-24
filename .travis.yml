@@ -4,10 +4,19 @@ jdk:
 
 jobs:
   include:
-    - stage: test
-      script: echo 'test'
+    - stage: unit-test
+      script: echo 'unit test'
+    - stage: integration-test
+      script: echo 'integration test'
     - stage: deploy
       script: echo 'deploy'
+
+stages:
+  - unit-test
+  - name: integration-test
+    if: branch = master
+  - name: deploy
+    if: branch = master
 
 #install: mvn install
 #before_script:
