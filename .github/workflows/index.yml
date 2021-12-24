@@ -1,8 +1,4 @@
 name: My Demo Index
-uses: actions/setup-java@v2.5.0
-with:
-  distribution: 'temurin'
-  java-version: '11'
 on: [push]
 jobs:
   say-hello:
@@ -12,6 +8,10 @@ jobs:
   say-java-version:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-java@v2.5.0
+      - with:
+          distribution: 'temurin'
+          java-version: '8'
       - run: java --version
   say-goodbay:
     runs-on: ubuntu-latest
